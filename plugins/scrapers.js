@@ -144,7 +144,7 @@ Module({
     use: 'AI',
     usage: '.Saghar Write a short note about Lionel Messi'
 }, (async (message, match) => {
-    if (!match[1]) return await message.sendReply("Need any query!");
+    if (!match[1]) return await message.sendReply("Yaar koi sawal kar!");
     if (!process.env.OPENAI_KEY) return await message.sendReply("_No OpenAI API key found. Get an API key:_\n\n_1. Create an account: https://platform.openai.com/signup/_\n\n_2. Then, open this url: https://platform.openai.com/account/api-keys and copy api key_\n\n_3. Add the key into OPENAI_KEY var using .setvar_\n\n_(Eg: .setvar OPENAI_KEY:yourkeyhere )_" )
     const {text} = await ChatGPT(match[1],process.env.OPENAI_KEY)
     return await message.sendReply(text || "_No response returned, please try again_")
@@ -156,7 +156,7 @@ Module({
     use: 'AI',
     usage: '.Saghar Write a short note about Lionel Messi'
 }, (async (message, match) => {
-    if (!match[1]) return await message.sendReply("Need any query!");
+    if (!match[1]) return await message.sendReply("ufff koi sawal karo yaar!");
     const result = await Davinci(match[1])
     const text = result.result?result.result:result;
     return await message.sendReply(text)
@@ -169,7 +169,7 @@ Module({
     use: 'AI',
     usage: '.Saghar Write a short note about Lionel Messi'
 }, (async (message, match) => {
-    if (!match[1]) return await message.sendReply("Need any query!");
+    if (!match[1]) return await message.sendReply("Koi sawal kar yaar!");
     const result = await Davinci(match[1])
     const text = result.result?result.result:result;
     return await message.sendReply(text)
